@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario de suscripción</title>
+  <link rel="stylesheet" href="suscripcion.css" />
+</head>
+<body>
+
+    <header class="main-header" role="banner">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="huella.jpeg" alt="Logo DoGwAllKing" width="60" style="border-radius:50%;">
+        <h1>DoGwAllKing</h1>
+      </div>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
+      <ul class="nav-menu">
+        <li><a href="dogwallking.html">Inicio</a></li>
+        <li><a href="blog_dog_wallking.html">Blog</a></li>
+        <li><a href="suscripcion.html">Suscripción</a></li>
+        <li><a href="ingreso.html">Ingreso</a></li>
+       <li><a href="#adopta">Adopta un Amigo</a></li>
+        
+       </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="contenedor-login" role="region" aria-labelledby="titulo-form">
+      <h1 id="titulo-form">Formulario de suscripción</h1>
+
+      <form id="formSuscripcion" class="formulario" novalidate>
+        <!-- Nombre -->
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre." required />
+          <p class="ayuda" id="ayuda-nombre" hidden>El nombre es obligatorio.</p>
+        </div>
+
+        <!-- Apellido -->
+        <div class="campo">
+          <label for="apellido">Apellido</label>
+          <input id="apellido" name="apellido" type="text" placeholder="Tu apellido" required />
+          <p class="ayuda" id="ayuda-apellido" hidden>El apellido es obligatorio.</p>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="campo">
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" minlength="8" placeholder="Mínimo 8 caracteres." required />
+          <p class="ayuda" id="ayuda-password" hidden>Mínimo 8 caracteres.</p>
+        </div>
+
+        <!-- Correo -->
+        <div class="campo">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" placeholder="tucorreo@dominio.com" required />
+          <p class="ayuda" id="ayuda-email" hidden>Introduce un correo válido.</p>
+        </div>
+
+        <!-- Edad -->
+        <div class="campo">
+          <label for="edad">Edad</label>
+          <input id="edad" name="edad" type="number" min="1" max="120" placeholder="Edad" required />
+          <p class="ayuda" id="ayuda-edad" hidden>Introduce una edad válida (18–120).</p>
+        </div>
+
+        <!-- Género -->
+        <fieldset class="grupo">
+          <legend>Género</legend>
+          <label class="opcion">
+            <input type="radio" name="genero" value="Masculino" required />
+            Masculino
+          </label>
+          <label class="opcion">
+            <input type="radio" name="genero" value="Femenino" />
+            Femenino
+          </label>
+          <label class="opcion">
+            <input type="radio" name="genero" value="Otro" />
+            Otro
+          </label>
+          <label class="opcion">
+            <input type="radio" name="genero" value="Prefiero no decirlo" />
+            Prefiero no decirlo
+          </label>
+          <p class="ayuda" id="ayuda-genero" hidden>Selecciona una opción.</p>
+        </fieldset>
+
+        <!-- Intereses -->
+        <fieldset class="grupo">
+          <legend>Intereses</legend>
+          <label class="opcion">
+            <input type="checkbox" name="intereses" value="Razas de Perros" />
+            Razas de Perros
+          </label>
+          <label class="opcion">
+            <input type="checkbox" name="intereses" value="Cuidado de Perros" />
+            Cuidado de Perros
+          </label>
+          <label class="opcion">
+            <input type="checkbox" name="intereses" value="Adiestramiento" />
+            Adiestramiento
+          </label>
+        </fieldset>
+
+        <!-- Botones -->
+        <div class="campo">
+          <button id="btnSuscribir" class="btn" type="submit" disabled>Suscribirse</button>
+          <button id="btnLimpiar" class="btn" type="button" style="margin-top:8px; background:linear-gradient(150deg,#4b5563,#9ca3af)">Limpiar</button>
+        </div>
+
+        <!-- Mensajes -->
+        <output id="mensaje" role="status" aria-live="polite" style="display:block;margin-top:6px;"></output>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

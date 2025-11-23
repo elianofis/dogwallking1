@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DoGwAllKing: Servicios profesionales para el cuidado, paseos, entrenamiento y adopción de perros. Tu mejor amigo merece lo mejor.">
+  <meta name="keywords" content="cuidado de perros, paseos caninos, veterinaria, adopción, Medellín">
+  <title>DoGwAllKing - Cuidamos a tu mejor amigo</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+  <!-- ======= ENCABEZADO ======= -->
+  <header class="main-header" role="banner">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="huella.jpeg" alt="Logo DoGwAllKing" width="60" style="border-radius:50%;">
+        <h1>DoGwAllKing</h1>
+      </div>
+    </div>
+
+    <!-- ======= NAVEGACIÓN ======= -->
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
+      <ul class="nav-menu">
+        <li><a href="dogwallking.html">Inicio</a></li>
+        <li><a href="blog_dog_wallking.html">Blog</a></li>
+        <li><a href="suscripcion.html">Suscripción</a></li>
+        <li><a href="ingreso.html">Ingreso</a></li>
+       <li><a href="#adopta">Adopta un Amigo</a></li>
+        
+       </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======= GALERÍA EN CARRUSEL ======= -->
+  <section class="carousel-container" aria-label="Galería de imágenes">
+    <div class="carousel-slide">
+      <img src="20190515_125754.jpg" alt="Paseo feliz con DoGwAllKing">
+      <img src="20190626_135157.jpg" alt="Entrenamiento con amor">
+      <img src="20220213_130618.jpg" alt="Cuidado veterinario profesional">
+     </div>
+    <div class="carousel-buttons">
+      <button id="prev"></button>
+      <button id="next"></button>
+    </div>
+  </section>
+
+  <!-- ======= SECCIÓN DE VIDEOS ======= -->
+  <section class="video-section" id="videos">
+    <h3>🎥 Videos Destacados</h3>
+    <p>Aprende sobre el cuidado y bienestar de tu mascota con nuestros videos educativos.</p>
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/DZVwWRZwqU8" title="Consejos para pasear a tu perro"></iframe>
+      <iframe src="https://www.youtube.com/embed/2wCkS4CRS8s" title="Alimentación saludable para perros"></iframe>
+      <iframe src="https://www.youtube.com/embed/h6p3Gx3yHqA" title="Cómo bañar correctamente a tu perro"></iframe>
+    </div>
+  </section>
+
+  <!-- ======= PIE DE PÁGINA ======= -->
+  <footer class="main-footer" role="contentinfo">
+    <p>© 2025 DoGwAllKing | Todos los derechos reservados</p>
+    <p>Teléfonos: 3148658539 | 3005169894</p>
+    <div class="footer-links">
+      <a href="https://www.fundaciontepa.org/" target="_blank" rel="noopener">Fundación TEPA</a> |
+      <a href="https://www.medellin.gov.co/es/secretaria-medio-ambiente/proteccion-y-bienestar-animal/" target="_blank" rel="noopener">Secretaría de Medio Ambiente Medellín</a> |
+      <a href="https://pawhom.com/" target="_blank" rel="noopener">PawHom</a>
+    </div>
+  </footer>
+
+  <!-- ======= SCRIPT DEL CARRUSEL ======= -->
+  <script>
+    const slide = document.querySelector('.carousel-slide');
+    const images = document.querySelectorAll('.carousel-slide img');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    let index = 0;
+
+    function showSlide(i) {
+      if (i >= images.length) index = 0;
+      else if (i < 0) index = images.length - 1;
+      else index = i;
+      slide.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    next.addEventListener('click', () => showSlide(index + 1));
+    prev.addEventListener('click', () => showSlide(index - 1));
+    setInterval(() => showSlide(index + 1), 5000);
+  </script>
+   <script src="script.js"></script>
+</body>
+</body>
+</html>

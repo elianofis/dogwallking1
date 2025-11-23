@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de ingreso a DoGwAllKing. Accede a tu cuenta para disfrutar de nuestros servicios de cuidado de perros, paseadores, veterinarios y más.">
+    <meta name="keywords" content="DoGwAllKing, ingreso, login, perros, cuidado, paseadores, veterinarios">
+    <title>DoGwAllKing - Cuidamos a tu mejor amigo</title>
+    <link rel="stylesheet" href="ingreso.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"> <!-- Añade un favicon si tienes uno -->
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header" role="banner">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="img/huella.jpeg" alt="Logo DoGwAllKing - Huella de perro" width="60" style="border-radius:50%;">
+                <h1>DoGwAllKing</h1>
+            </div>
+        </div>
+
+        <body>
+ <header class="main-header" role="banner">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="huella.jpeg" alt="Logo DoGwAllKing" width="60" style="border-radius:50%;">
+        <h1>DoGwAllKing</h1>
+      </div>
+    </div>
+
+    <!-- ======= MENÚ DE NAVEGACIÓN ======= -->
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li><a href="dogwallking.html">Inicio</a></li>
+        <li><a href="blog_dog_wallking.html" class="active">Blog</a></li>
+        <li><a href="suscripcion.html">suscripcion</a></li>
+        <li><a href="ingreso.html">Ingreso</a></li>
+    </nav>
+  </header>
+
+  
+
+    <main>
+        <section class="contenedor-login" role="region" aria-labelledby="titulo-login">
+            <div class="form-login-container">
+                <h1 id="titulo-login">Ingresar</h1>
+                <p>Accede a tu cuenta para disfrutar de nuestros servicios para tu mejor amigo 🐶</p>
+
+                <form class="form-login" action="#" method="post" novalidate>
+                    <label for="usuario">Usuario o Correo:</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario o email" autocomplete="username" required>
+
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" autocomplete="current-password" required>
+
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox" name="remember"> Recordarme
+                        </label>
+                        <a href="#recuperar" aria-label="Recuperar contraseña">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login-submit">Entrar</button>
+                </form>
+
+                <p class="registro-link">¿No tienes cuenta? <a href="registro.html" aria-label="Ir a registro">Regístrate aquí</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer básico -->
+    <footer role="contentinfo">
+        <p>&copy; 2025 DoGwAllKing | Cuidamos a tu mejor amigo 🐕</p>
+    </footer>
+
+    <!-- Enlace al archivo JS -->
+    <script src="script.js"></script>
+</body>
+</html>

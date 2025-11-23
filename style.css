@@ -1,0 +1,246 @@
+/* PALETA DE COLORES 
+      Azul fuerte: #0422C8
+      Azul medio: #0B61ED
+      Azul claro: #23ADF9
+      Celeste: #77D4FA
+      Fondo suave: #BEF2FB*/
+
+    /* ===================== ESTILOS GENERALES ===================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #BEF2FB;
+  color: #0422C8;
+  background-image: url('huella.jpeg'); /* Logo como fondo */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 60%;
+}
+
+/* ===================== ENCABEZADO ===================== */
+header {
+  background: linear-gradient(90deg, #0422C8, #0B61ED, #23ADF9);
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===================== NAVEGACIÓN ===================== */
+nav {
+  background-color: #0422C8;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 16px 22px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #23ADF9;
+  color: #0422C8;
+  border-radius: 6px;
+}
+
+/* Submenús */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 48px;
+  background-color: #0B61ED;
+  border-radius: 0 0 10px 10px;
+  min-width: 150px;
+  z-index: 999;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li a {
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+nav ul li ul li a:hover {
+  background-color: #77D4FA;
+  color: #0422C8;
+}
+
+/* ===================== CONTENIDO PRINCIPAL ===================== */
+main {
+  text-align: center;
+  padding: 30px 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 50px;
+  color: #0422C8;
+  text-shadow: 2px 2px #77D4FA;
+}
+
+h2 {
+  color: #0B61ED;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  text-align: left;
+  display: inline-block;
+  margin-top: 20px;
+  color: #0422C8;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ===================== CARRUSEL ===================== */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.carousel-buttons button:hover {
+  background-color: rgba(255,255,255,0.9);
+}
+
+/* ===================== SECCIÓN DE VIDEOS ===================== */
+.video-section {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.video-section h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #0422C8;
+}
+
+.video-section p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.video-grid iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===================== PIE DE PÁGINA ===================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0422C8;
+  color: white;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #23ADF9;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #BEF2FB;
+  text-decoration: underline;
+}
+
+/* ===================== BOTONES CTA ===================== */
+.cta-button {
+  display: inline-block;
+  background-color: #0B61ED;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #23ADF9;
+  color: #0422C8;
+}
+
