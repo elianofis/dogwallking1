@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DoGwAllKing: Servicios profesionales para el cuidado, paseos, entrenamiento y adopción de perros. Tu mejor amigo merece lo mejor.">
-  <meta name="keywords" content="cuidado de perros, paseos caninos, veterinaria, adopción, Medellín">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="DoGwAllKing: Servicios profesionales para el cuidado, paseos, entrenamiento y adopción de perros. Tu mejor amigo merece lo mejor." />
+  <meta name="keywords" content="cuidado de perros, paseos caninos, veterinaria, adopción, Medellín" />
   <title>DoGwAllKing - Cuidamos a tu mejor amigo</title>
   <link rel="stylesheet" href="style.css">
- 
 </head>
 
 <body>
@@ -20,6 +19,8 @@
       </div>
     </div>
 
+    
+
     <!-- ======= NAVEGACIÓN ======= -->
     <nav class="navbar" role="navigation" aria-label="Menú principal">
       <ul class="nav-menu">
@@ -27,12 +28,7 @@
         <li><a href="blog_dog_wallking.html">Blog</a></li>
         <li><a href="suscripcion.html">Suscripción</a></li>
         <li><a href="ingreso.html">Ingreso</a></li>
-       <li><a href="#adopta">Adopta un Amigo</a></li>
-        
-       </ul>
-            </li>
-          </ul>
-        </li>
+        <li><a href="adoptaaunamigo.html">Adopta un Amigo</a></li>
       </ul>
     </nav>
   </header>
@@ -43,21 +39,32 @@
       <img src="20190515_125754.jpg" alt="Paseo feliz con DoGwAllKing">
       <img src="20190626_135157.jpg" alt="Entrenamiento con amor">
       <img src="20220213_130618.jpg" alt="Cuidado veterinario profesional">
-     </div>
+    </div>
+
     <div class="carousel-buttons">
-      <button id="prev"></button>
-      <button id="next"></button>
+      <button id="prev" aria-label="Anterior"></button>
+      <button id="next" aria-label="Siguiente"></button>
     </div>
   </section>
+
+  <!-- ======= BOTONES CENTRALES ======= -->
+  <div class="nav-buttons">
+    <!-- enlace a la página de ingreso -->
+    <a href="ingreso.html" class="btn ingreso">Ingreso</a>
+
+    <!-- enlaces directos (asegúrate que existan con estos nombres) -->
+    <a href="adoptaaunamigo.html" class="btn adopta">Adopta un amigo</a>
+    <a href="blog_dog_wallking.html" class="btn blog">Blog</a>
+  </div>
 
   <!-- ======= SECCIÓN DE VIDEOS ======= -->
   <section class="video-section" id="videos">
     <h3>🎥 Videos Destacados</h3>
     <p>Aprende sobre el cuidado y bienestar de tu mascota con nuestros videos educativos.</p>
     <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/DZVwWRZwqU8" title="Consejos para pasear a tu perro"></iframe>
-      <iframe src="https://www.youtube.com/embed/2wCkS4CRS8s" title="Alimentación saludable para perros"></iframe>
-      <iframe src="https://www.youtube.com/embed/h6p3Gx3yHqA" title="Cómo bañar correctamente a tu perro"></iframe>
+      <iframe src="https://www.youtube.com/embed/DZVwWRZwqU8" title="Consejos para pasear a tu perro" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/2wCkS4CRS8s" title="Alimentación saludable para perros" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/h6p3Gx3yHqA" title="Cómo bañar correctamente a tu perro" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -81,17 +88,19 @@
     let index = 0;
 
     function showSlide(i) {
+      if (!slide) return;
       if (i >= images.length) index = 0;
       else if (i < 0) index = images.length - 1;
       else index = i;
       slide.style.transform = `translateX(${-index * 100}%)`;
     }
 
-    next.addEventListener('click', () => showSlide(index + 1));
-    prev.addEventListener('click', () => showSlide(index - 1));
+    if (next) next.addEventListener('click', () => showSlide(index + 1));
+    if (prev) prev.addEventListener('click', () => showSlide(index - 1));
     setInterval(() => showSlide(index + 1), 5000);
   </script>
-   <script src="script.js"></script>
-</body>
+
+  
+  <script src="script.js"></script>
 </body>
 </html>

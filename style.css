@@ -5,13 +5,13 @@
       Celeste: #77D4FA
       Fondo suave: #BEF2FB*/
 
-    /* ===================== ESTILOS GENERALES ===================== */
+/* ===================== ESTILOS GENERALES ===================== */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   background-color: #BEF2FB;
   color: #0422C8;
-  background-image: url('huella.jpeg'); /* Logo como fondo */
+  background-image: url('huella.jpeg'); 
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -206,6 +206,33 @@ p {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* ===================== BOTONES CENTRALES ===================== */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #0B61ED;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
+  text-align: center;
+  min-width: 180px;
+}
+
+.btn:hover {
+  background-color: #23ADF9;
+  color: #0422C8;
+}
+
 /* ===================== PIE DE PÁGINA ===================== */
 footer {
   text-align: center;
@@ -224,23 +251,3 @@ footer a:hover {
   color: #BEF2FB;
   text-decoration: underline;
 }
-
-/* ===================== BOTONES CTA ===================== */
-.cta-button {
-  display: inline-block;
-  background-color: #0B61ED;
-  color: white;
-  padding: 12px 25px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 20px;
-  transition: 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #23ADF9;
-  color: #0422C8;
-}
-
